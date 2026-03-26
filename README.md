@@ -16,12 +16,13 @@ Install dependencies and run training with accelerate:
 
 ```bash
 # install requirements for F-LAM
-pip install -r f-lam/requirements.txt
+cd f-lam
+pip install -r requirements.txt
 
-# run training (single-GPU)
+# train on single-GPU
 accelerate launch train_lam.py --config_path lam_calvin.yaml
 
-# run multi-GPU (8 processes)
+# train on multi-GPU (8 processes)
 accelerate launch --num_processes=8 --num_machines=1 train_lam.py --config_path lam_calvin.yaml
 ```
 
